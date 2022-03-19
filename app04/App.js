@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Pressable } from 'react-native';
+import { StyleSheet, Text, View, Pressable, Image } from 'react-native';
 import { useState } from 'react';
 import Input from './components/Input';
 
@@ -25,10 +25,17 @@ export default function App() {
     setGasolina(0)
   }
 
+  const profilePicUrl = 'https://radiosolaris.com.br/wp-content/uploads/2020/08/gasolina1_1596535127.jpg';
+
 
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text>Álcool ou Gasolina?</Text>
+
+      <Image
+          source={{ uri: profilePicUrl}}
+          style={{ width: 200, height: 200, borderRadius: 300, marginVertical: 24}}
+        ></Image>
       
       <Input 
         placeholder="Preço do Álcool"
