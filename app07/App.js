@@ -39,7 +39,7 @@ export default function App() {
       </View>
 
 
-      <View style={styles.flex}> 
+      <View style={styles.select}> 
         <Text>Sexo: </Text>
         <Picker
           selectedValue={genero}
@@ -51,7 +51,7 @@ export default function App() {
         </Picker>
       </View>
 
-      <View style={styles.flex}> 
+      <View style={styles.select}> 
         <Text>Escolaridade: </Text>
         <Picker
           selectedValue={escolaridade}
@@ -99,10 +99,10 @@ export default function App() {
       <View>
         {data && Object.keys(data).map((item) => {
           return (
-            <View style={styles.flex}>
+            <View style={styles.flex} key={item}>
               <Text
                 style={{fontWeight: 'bold', textTransform: 'uppercase'}}
-                key={item}
+                
               >
                 {item}: 
               </Text>
@@ -135,5 +135,8 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: 'white'
+  },
+  select: {
+    minWidth: 200,
   }
 });
